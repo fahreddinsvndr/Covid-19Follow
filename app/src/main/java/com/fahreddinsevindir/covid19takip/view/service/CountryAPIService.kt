@@ -16,7 +16,7 @@ class CountryAPIService {
 
         val requestBuilder = original.newBuilder()
             .addHeader("content-type","application/json")
-            .addHeader("authorization", "apikey 02Yf5lwKIhyZrhJ5r4xsod:64wTg9U51DnafPItWMluZi")
+            .addHeader("authorization", "apikey")
             .method(original.method(), original.body())
 
         val request = requestBuilder.build()
