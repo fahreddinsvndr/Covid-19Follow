@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="country"
+            type="com.fahreddinsevindir.covid19takip.view.model.Model" />
+        <variable
+            name="listener"
+            type="com.fahreddinsevindir.covid19takip.view.adapter.CountryClickListener" />
+
+    </data>
+
+<LinearLayout
+     android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:onClick="@{listener::onCountryClicked}"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/countryUuidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@{String.valueOf(country.uuid)}">
+
+    </TextView>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:padding="3dp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/maske"
+        app:lottie_loop="true"
+        >
+
+    </com.airbnb.lottie.LottieAnimationView>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{country.countryName}"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+        <TextView
+            android:id="@+id/disease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{country.yeniVaka}"
+            android:textSize="16sp"
+            android:padding="5dp">
+        </TextView>
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>

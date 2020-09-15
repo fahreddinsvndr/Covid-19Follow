@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="selectedCountry"
+            type="com.fahreddinsevindir.covid19takip.view.model.Model" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.view.CountryDetailsFragment">
+
+    <ImageView
+        android:id="@+id/countryImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:minHeight="200dp"
+        android:src="@drawable/covi">
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_below="@id/countryImage"
+        android:text="@{selectedCountry.countryName}"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/tplmVaka"
+        android:layout_below="@id/countryName"
+        android:text="@{selectedCountry.tplmVaka}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/yeniVaka"
+        android:layout_below="@id/tplmVaka"
+        android:text="@{selectedCountry.yeniVaka}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/tplmOlum"
+        android:layout_below="@id/yeniVaka"
+        android:text="@{selectedCountry.tplmOlum}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/yeniOlum"
+        android:layout_below="@id/tplmOlum"
+        android:text="@{selectedCountry.yeniOlum}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/tplmİyilesen"
+        android:layout_below="@id/yeniOlum"
+        android:text="@{selectedCountry.tplmİyilesen}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/aktifVaka"
+        android:layout_below="@id/tplmİyilesen"
+        android:text="@{selectedCountry.aktifVaka}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+
+
+</RelativeLayout>
+</layout>
