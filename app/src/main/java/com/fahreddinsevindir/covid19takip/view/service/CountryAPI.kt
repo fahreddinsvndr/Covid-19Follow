@@ -8,7 +8,7 @@ import retrofit2.http.Headers
 
 interface CountryAPI {
 
-    @Headers("application/json,02Yf5lwKIhyZrhJ5r4xsod:64wTg9U51DnafPItWMluZi")
+    @Headers("application/json,your token apikey")
     @GET("corona/countriesData")
     fun getCountries():Single<Results>
 }
